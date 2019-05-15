@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template: 75px 75px 1fr 100px / 200px 800px minmax(300px, auto);
+    grid-template-areas:
+        "h h h"
+        "n n n"
+        ". m ."
+        "f f f";
+    font-family: 'Open Sans', sans-serif;
+}
+
+.h_top {
+    grid-area: h;
+    display: grid;
+    grid-template-columns: 200px 800px minmax(300px, auto);
+    align-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.logo {
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.form {
+    grid-column-start: 2;
+    border: solid 1px #EBEBEB;
+    border-radius: 50px 50px;
+    padding: 10px;
+    display: flex;
+}
+
+.form:focus-within {
+    transition-duration: 100ms;
+    box-shadow: 1px 2px 5px #E5E5E5;
+    border-color: #f3f3f3;
+}
+
+.form:hover {
+    transition-duration: 100ms;
+    box-shadow: 1px 2px 5px #E5E5E5;
+    border-color: #f3f3f3;
+}
+
+#mic {
+    margin-left: 10px;
+    width: 15px;
+}
+
+#loupe {
+    margin-left: 15px;
+    width: 25px;
+}
+
+input {
+    width: 90%;
+    height: 20px;
+    font-size: 1.4em;
+    border: none;
+    outline: none;
+    margin-top: 5px
+}
+
+.google {
+    grid-column-start: 3;
+    text-align: right;
+}
+
+.fa-user-circle::before {
+    font-size: 40px;
+    color: blueviolet;
+    margin: 10px 40px 0 15px;
+    vertical-align: middle;
+}
+
+.fa-th:before {
+    font-size: 25px;
+    color: #808080;
+    vertical-align: middle;
+}
+
+
+/*--------------------NAV-----------------------*/
+
+.h_nav {
+    grid-area: n;
+    display: grid;
+    grid-template-columns: 200px 800px minmax(300px, auto);
+    border-bottom: solid 1px #ffffff;
+}
+
+nav {
+    grid-column-start: 2;
+}
+
+nav ul {
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.ul-nav a {
+    color: #777;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.ul-nav li {
+    padding: 24px
+}
+
+.acti {
+    border-bottom: solid 5px #1973E8;
+}
+
+#acti {
+    color: #1973E8;
+}
+
+.ul-nav a:hover {
+    color: #222;
+}
+
+/*--------------------MAIN-----------------------*/
+
+.main {
+    grid-area: m;
+}
+
+.main section {
+    padding-left: 20px;
+    margin: 40px 0;
+}
+
+#p1 {
+    padding-left: 20px;
+}
+
+.main p {
+    color: #222;
+}
+
+#first {
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 10px;
+    padding: 20px 10px 20px 20px;
+    margin-bottom: 2px;
+}
+
+#first span,
+#first-p {
+    color: #080808;
+    font-size: 1.2rem
+}
+
+.main section p {
+    margin-top: 5px;
+    color: #6a6a6a;
+}
+
+p span {
+    color: #6a6a6a;
+    font-weight: bold;
+}
+
+.about {
+    margin: 0;
+    text-align: end;
+}
+
+.fa-exclamation-circle:before {
+    margin: 0 10px;
+}
+
+.fa-question-circle:before {
+    margin: 0 10px;
+}
+
+
+.lien-plus {
+    color: rgb(88, 88, 88);
+    margin-right: 20px;
+}
+
+.lien-plus :hover {
+    text-decoration: underline;
+}
+
+.fa-question-circle:hover {
+    text-decoration: none;
+}
+
+.fa-exclamation-circle:hover {
+    text-decoration: none;
+}
+
+
+.lien {
+    color: #006621;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+h2,
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 a,
+h1 a {
+    margin-bottom: 5px;
+    color: #1a0dab;
+}
+
+h2 a:hover,
+h1 a:hover {
+    text-decoration: underline;
+}
+
+.google ul{
+    display: flex;
+    justify-content: center;
+}
+
+.google a{
+    margin: 0 2px;
+}
+
+.google li:hover a :not(span){
+    text-decoration: underline;
+}
+
+.google span{
+    font-size: 3.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.small {
+    font-weight: 100;
+    font-size: 5px;
+}
+
+.google p{
+    text-align: center;
+    color: #4D8AF5;
+}
+
+.bleu {
+    color: #4D8AF5;
+}
+
+.red {
+    color: #EA4335;
+}
+
+.yellow{
+    color: #FBBC03;
+}
+
+.green{
+    color: #34A853;
+}
+
+.droit{
+    padding: 0 0 0 100px;
+}
+
+#black{
+    color:black;
+    text-decoration: underline;
+}
+
+/*--------------------footer-----------------------*/
+
+.footer {
+    grid-area: f;
+    display: grid;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    grid-template: 1fr 1fr / 200px 800px minmax(300px, auto);
+    font-size: 20px;
+    grid-template-areas: 
+    "p p p"
+    "ul ul ul";
+}
+
+.fp {
+    grid-area: p;
+    color: #5f6368;
+    border-bottom: 1px solid #e4e4e4;
+    margin: 0;
+    padding: 20px 0 20px 220px;
+}
+
+.ful {
+    grid-area: ul;
+    display: flex;
+    padding-left: 0;
+    padding-left: 20px; 
+    margin: 0;
+    padding: 20px 0 20px 220px;
+    background: #f2f2f2;
+}
+
+.ful li {
+    padding-right: 50px;
+}
+
+.ful a:hover {
+    color: #222;
+}
+.ful a {
+    color: #777;
+    font-weight: 500;
+    font-size: 18px;
+}
